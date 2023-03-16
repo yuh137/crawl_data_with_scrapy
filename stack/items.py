@@ -13,3 +13,8 @@ class StackItem(Item):
     # name = scrapy.Field()
     url = Field()
     title = Field()
+
+class VNExpressItem(Item):
+    url = Field()
+    title = Field()
+    description = Field()

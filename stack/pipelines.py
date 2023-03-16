@@ -5,7 +5,7 @@
 
 
 # useful for handling different item types with a single interface
-from itemadapter import ItemAdapter
+# from itemadapter import ItemAdapter
 import logging  
 import pymongo 
 # from scrapy.utils.project import get_project_settings

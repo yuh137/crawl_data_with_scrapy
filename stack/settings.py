@@ -62,12 +62,12 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {'stack.pipelines.MongoDBPipeline': 0,}
+ITEM_PIPELINES = {'stack.pipelines.MongoDBPipeline': 0}
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
-MONGODB_DB = "stackoverflow"
-MONGODB_COLLECTION = "questions"
+MONGODB_DB = "vnexpress"
+MONGODB_COLLECTION = "World news"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

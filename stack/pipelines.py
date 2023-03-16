@@ -6,20 +6,23 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+import logging  
 import pymongo 
-from scrapy import settings
+# from scrapy.utils.project import get_project_settings
+# import settings
 from scrapy.exceptions import DropItem
-import logging
+import stack.settings as settings
 
 
 class MongoDBPipeline(object):
     def __init__(self):
+        # settings = get_project_settings
         connection = pymongo.MongoClient(
-            settings['MONGODB_SERVER'],
-            settings['MONGODB_PORT']
+            settings.MONGODB_SERVER,
+            settings.MONGODB_PORT
         )
-        db = connection[settings['MONGODB_DB']]
-        self.collection = db[settings['MONGODB_COLLECTION']]
+        db = connection[settings.MONGODB_DB]
+        self.collection = db[settings.MONGODB_COLLECTION]
         self.logger = logging.getLogger(__name__)
 
     def process_item(self, item, spider):
